@@ -21,7 +21,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-20T00:00:00-07:00","datePublished":"2023-09-20T00:00:00-07:00","description":"Practicing 2d Arrays using Collegeboard","headline":"FRQ 1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/CSA/2023/09/20/frq1_IPYNB_2_.html"},"url":"http://localhost:4200/CSA/2023/09/20/frq1_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/CSA/assets/css/style.css?v=2d78891a13c1ac5e847a34e1fdaf43a1bf5c4829">
+  <link rel="stylesheet" href="/CSA/assets/css/style.css?v=e8e5488cf4fb37724c44f971f1d3439b22a66e4b">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/CSA/assets/js/scale.fix.js"></script>
@@ -110,6 +110,24 @@ Complete the LightBoard constructor below.</p>
 <span class="o">}</span>
 </code></pre></div></div>
 
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// What Collegeboard did</span>
+
+<span class="kd">public</span> <span class="nf">LightBoard</span><span class="o">(</span><span class="kt">int</span> <span class="n">numRows</span><span class="o">,</span> <span class="kt">int</span> <span class="n">numCols</span><span class="o">)</span>
+<span class="o">{</span>
+ <span class="n">lights</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="n">numRows</span><span class="o">][</span><span class="n">numCols</span><span class="o">];</span>
+ <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">numRows</span><span class="o">;</span> <span class="n">r</span><span class="o">++)</span>
+ <span class="o">{</span>
+ <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">numCols</span><span class="o">;</span> <span class="n">c</span><span class="o">++)</span>
+ <span class="o">{</span>
+ <span class="kt">double</span> <span class="n">rnd</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">();</span>
+ <span class="n">lights</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span> <span class="o">=</span> <span class="n">rnd</span> <span class="o">&lt;</span> <span class="mf">0.4</span><span class="o">;</span>
+ <span class="o">}</span>
+ <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Collegeboard also iterated using two variables, however they used a double (float) type to decide the on and off status of the light while I used a boolean instead.</p>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Printing an output</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">LightBoard</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">lights</span><span class="o">;</span>
@@ -190,6 +208,30 @@ that is off. Lights that are off are shaded.</p>
 <span class="o">}</span>
 </code></pre></div></div>
 
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// What Collegeboard did</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">evaluateLight</span><span class="o">(</span><span class="kt">int</span> <span class="n">row</span><span class="o">,</span> <span class="kt">int</span> <span class="n">col</span><span class="o">)</span>
+<span class="o">{</span>
+ <span class="kt">int</span> <span class="n">numOn</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+ <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">lights</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">r</span><span class="o">++)</span>
+ <span class="o">{</span>
+ <span class="k">if</span> <span class="o">(</span><span class="n">lights</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">col</span><span class="o">])</span>
+ <span class="o">{</span>
+ <span class="n">numOn</span><span class="o">++;</span>
+ <span class="o">}</span>
+ <span class="o">}</span>
+
+ <span class="k">if</span> <span class="o">(</span><span class="n">lights</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="n">numOn</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+ <span class="o">{</span>
+ <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+ <span class="o">}</span>
+ <span class="k">if</span> <span class="o">(!</span><span class="n">lights</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="n">numOn</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+ <span class="o">{</span>
+ <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+ <span class="o">}</span>
+ <span class="k">return</span> <span class="n">lights</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">];</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Printing an Output</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">LightBoard</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">lights</span><span class="o">;</span> 
@@ -248,17 +290,64 @@ that is off. Lights that are off are shaded.</p>
 <span class="nc">LightBoard</span><span class="o">.</span><span class="na">main</span><span class="o">(</span><span class="kc">null</span><span class="o">)</span>
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>true false false false true false 
-true false true false false false 
-false false false false false true 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>false true true false false false 
+false true true true true true 
 false false true false true false 
+true true false false true false 
 </code></pre></div></div>
+
+<h2 id="scoring">Scoring</h2>
+
+<h3 id="part-a">Part A</h3>
+
+<p>Intent: Define implementation of a constructor that initializes a 2D array of lights</p>
+
+<p>+1 Creates a new boolean[numRows][numCols] and assigns to instance variable lights</p>
+
+<p>+1 Accesses all elements in the created 2D array (no bounds errors)</p>
+
+<p>+1 Computes the 40% probability</p>
+
+<p>+1 Sets all values of 2D array based on computed probability</p>
+
+<h3 id="part-b">Part B</h3>
+
+<p>Intent: Evaluate the status of a light in a 2D array of lights</p>
+
+<p>+1 Accesses an element of lights as a boolean value in an expression</p>
+
+<p>+1 Traverses specified col of a 2D array (no bounds errors)</p>
+
+<p>+1 Counts the number of true values in the traversal</p>
+
+<p>+1 Performs an even calculation and a multiple of three calculation</p>
+
+<p>+1 Returns true or false according to all three rules</p>
+
+<h3 id="penalties">Penalties</h3>
+
+<p>-1 (z) Constructor returns a value</p>
+
+<p>-1 (y) Destruction of persistent data</p>
+
+<p>My Score: 9/9</p>
 
 <h2 id="main-takeaways">Main Takeaways</h2>
 
 <ul>
-  <li>The syntax is really specific, you need to use what collegeboard gave you</li>
-  <li>Even if you don’t know Java that well you can still do well if you know code logic</li>
+  <li>The syntax is really specific
+    <ul>
+      <li>You need to use what collegeboard gave you</li>
+      <li>You can’t omit keywords even if the code will run without it</li>
+    </ul>
+  </li>
+  <li>Even if you don’t know Java that well you can still do well if you know code logic
+    <ul>
+      <li>Making arrays through iterations</li>
+      <li>Getting the probability of lights being on to be .4</li>
+      <li>Modular expression</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="similarities">Similarities</h2>
