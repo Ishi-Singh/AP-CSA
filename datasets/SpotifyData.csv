@@ -1,4 +1,4 @@
-track_name,artist_name,artist_count,released_year,released_month,released_day,in_spotify_playlists,in_spotify_charts,danceability_%,valence_%,energy_%,acousticness_%,instrumentalness_%,liveness_%,speechiness_%
+song,artist_name,artist_count,released_year,released_month,released_day,in_spotify_playlists,in_spotify_charts,danceability,valence,energy,acousticness,instrumentalness,liveness,speechiness
 Queencard,(G)I-DLE,1,2023,5,15,451,33,82,69,83,3,0,27,5
 Nxde,(G)I-DLE,1,2022,10,17,430,6,73,65,91,4,0,48,18
 thought i was playing,"21 Savage, Gunna",2,2022,1,7,807,0,68,29,73,0,0,7,7
