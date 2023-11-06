@@ -2,7 +2,7 @@ title: CSA Blogs
 description: "August 2023 to June 2024"
 owner_name: Ishi Singh
 github_username: Ishi-Singh
-baseurl: "/CSA"
+baseurl: "/AP-CSA"
 # remote_theme: pages-themes/midnight@v0.2.0
 remote_theme: pages-themes/dinky@v0.2.0
 # remote_theme: pages-themes/minimal@v0.2.0
