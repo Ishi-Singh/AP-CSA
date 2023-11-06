@@ -1,5 +1,5 @@
 ---
-toc: false
+toc: true
 comments: true
 layout: post
 title: Collegeboard 2014 Practice Exam MCQ
@@ -52,7 +52,8 @@ The for loop control variable k starts with the value 3, is incremented by 1 and
 
 ![image](https://github.com/Ishi-Singh/AP-CSA/assets/82348259/038ace38-4272-457e-8842-381fbff01db4)
 
-By applying De Morgan’s Law to this expression, we negate the first expression !(!(a !=b)) and the second expression !(b >7) to form !(!(a != b)) || !(b > 7). In the first expression the two consecutive not operators (!) cancel each other out giving us (a != b). In the second expression, the opposite of > is <= giving us (b <= 7). The equivalent expression is (a != b) || (b <= 7).
+```By applying De Morgan’s Law to this expression, we negate the first expression !(!(a !=b)) and the second expression !(b >7) to form !(!(a != b)) || !(b > 7). In the first expression the two consecutive not operators (!) cancel each other out giving us (a != b). In the second expression, the opposite of > is <= giving us (b <= 7). The equivalent expression is (a != b) || (b <= 7).
+```
 
 ### Q21
 
