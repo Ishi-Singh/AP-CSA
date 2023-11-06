@@ -32,6 +32,17 @@ Load all posts with site
 </h2>
 <p>  {{ unitData.description }} </p>
 
+{% if unitData.illustration %}
+<details>
+  <summary>Illustration</summary>
+
+  <pre>
+    <p>{{ unitData.illustration }}</p>
+  </pre>
+</details>
+<br/>
+{% endif %}
+
 {% assign start = unitData.start %}
 {% assign end = unitData.end %}
 
@@ -115,7 +126,7 @@ Load all posts with site
   <tr>
   <td> {{ index }} </td> 
   <td>
-  {% for i in (0..units.size) -%} 
+  {% for i in (0..100) -%} 
     {% if units.size == 0 %}
       {% break %}
     {% elsif units[0] == sym %} <!-- make new column -->
@@ -133,3 +144,4 @@ Load all posts with site
 
 </table>
 {% endfor %}
+
