@@ -22,8 +22,7 @@ The answer is not E because the expression ``if (val > maxVal)`` will evaluate t
 
 This piece of code is combinig all of the strings which will cause "rattrap" "similar" and "today" to combine and form "rattrapsimilartoday". The combination of "similar" and "today" will form the word "art" which will cause these words to retun True even though "art" is not in these words
 
-
-## 9
+### 9
 
 ![image](https://github.com/Ishi-Singh/AP-CSA/assets/82348259/06c69a6a-7c73-4acf-a599-457955a44e57)
 
