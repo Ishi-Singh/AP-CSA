@@ -26,7 +26,9 @@ There were also many student lessons done last tri, and I attempted to do the be
 |Lesson|GitHub Issues Link|
 |----------|-----------|
 |Tri 1 Student Lessons| [Link](https://github.com/Ishi-Singh/AP-CSA/issues/3) |
-|Tri 2 Student Lessons| [Link](https://ishi-singh.github.io/AP-CSA/2024/02/14/2015FRQ2_IPYNB_2_.html) |
+|Tri 2 Student Lessons| [Link](https://github.com/nighthawkcoders/teacher_portfolio/issues/91#issuecomment-1885663375) |
+
+Other cool stuff that probably improved my understanding of CSA material is the [Deployment Pop Quiz](https://github.com/nighthawkcoders/teacher_portfolio/issues/106#issuecomment-1917830358) which pushed me to start understanding how the backend works to a greater extent than what I previosly knew. And using AWS to deploy the backend for our project helped refresh my memory as to how deployment works. 
 
 ## Tri 3 Plans
 
