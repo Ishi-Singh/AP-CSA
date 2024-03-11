@@ -3,6 +3,8 @@ toc: True
 comments: True
 layout: post
 title: Alumni Panel
+courses: {'compsci': {'week': 3}}
+type: tangibles
 ---
 
 ## Notes

@@ -3,8 +3,9 @@ toc: false
 comments: false
 hide: true
 layout: post
-type: help
+type: plans
 title: Tool References
+courses: { compsci: {week: 0} }
 ---
 
 ### `Visual Studio Code` [Overview](https://code.visualstudio.com/docs/introvideos/basics)

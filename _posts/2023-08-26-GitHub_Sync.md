@@ -5,6 +5,8 @@ hide: true
 layout: post
 type: help
 title: GitHub Overview
+courses: {'compsci': {'week': 1}}
+type: plans
 ---
 
 ## References
